@@ -82,10 +82,21 @@ hist(s.results)
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+results <- as.numeric(1:200)
+for(i in results){
+  results[i] <- BrLw(29, 2, 637)
+}
+t.test(results)
 
+s.results = sort(results)
 
+hist(results)
 
+hist(s.results)
+```
 
+To make the bet fair for the students, the class size would need to be decreased to 28-29 students. This makes intuitive sense because decresasing the class size decreases the amount of birthdays in the room that could be the same. The 95% confidence interval when there are 29 students in the room is `r s.results[5]` to `r s.results[195]`.
 
 
 
