@@ -34,7 +34,7 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 
 ## Our strategy is to build a Function and the use it to answer the three questions. 
 
-The function will be given a class_size by number of students, odds, and Number_of_times brownlow made the bet.  It will give you back how much Brownlows earnings were. We will use it to answer our three questions below. If you can, improve this function by giving default values to some of its inputs. 
+The function will be given a class_size by number of students, odds, and Number_of_times Brownlow made the bet.  It will give you back how much Brownlows earnings were. We will use it to answer our three questions below. If you can, improve this function by giving default values to some of its inputs. 
 
 # In the class and payoff as described  If you highered 40 brownlow substitute teachers to do the same thing that Brownlow did then.
 ## what is their average earnings
@@ -53,6 +53,9 @@ s.results = sort(results)
 hist(results)
 
 hist(s.results)
+
+ResultFive = s.results[5]
+ResultNinetyfive = s.results[95]
 ```
 
 A 95% confidence interval of Brownlow's earnings is `r s.results[5]` to `r s.results[195]`.
@@ -101,3 +104,4 @@ To make the bet fair for the students, the class size would need to be decreased
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+A 95% confidence interval of Brownlow's earnings under normal conditions is `r ResultFive` to `r ResultNinetyfive`. This indicates the Professor Brownlow has a gigantic payout every year, which accumulates as time goes on. In this game, Brownlow makes $1 every time he wins, and loses $2 every time he loses. To decrease his overall profit to $0, he would have to increase this odds ratio to 4.39. Another way to decrease his profit to $0 is by decreasing the class size to 29.
