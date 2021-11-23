@@ -24,7 +24,7 @@ source(file="BrLw.R")
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
- At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
+At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
  
 Report git commit structure:
 There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
@@ -59,7 +59,6 @@ A 95% confidence interval of Brownlow's earnings is `r s.results[5]` to `r s.res
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
 
-
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
 ```{r}
@@ -76,7 +75,7 @@ hist(results)
 hist(s.results)
 ```
 
-
+To make Brownlow's net total around zero, he would have to have his odds decreased to 4.39. This makes intuitive sense; as the odds increase and the professor has to pay more every time he loses, his net profit decreases. This would create a 95% confidence interval of `r s.results[5]` to `r s.results[195]`.
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
@@ -96,9 +95,7 @@ hist(results)
 hist(s.results)
 ```
 
-To make the bet fair for the students, the class size would need to be decreased to 28-29 students. This makes intuitive sense because decresasing the class size decreases the amount of birthdays in the room that could be the same. The 95% confidence interval when there are 29 students in the room is `r s.results[5]` to `r s.results[195]`.
-
-
+To make the bet fair for the students, the class size would need to be decreased to 28-29 students. This makes intuitive sense because decreasing the class size decreases the amount of birthdays in the room that could be the same. The 95% confidence interval when there are 29 students in the room is `r s.results[5]` to `r s.results[195]`.
 
 # Discussion and Conclusion
 
